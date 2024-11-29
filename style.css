@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+body {
+ 
+    height:100vh;
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+}
+
+nav {
+  /* border: 1px solid red; */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.nav-menu,
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.btn {
+  padding: 10px 20px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(28, 20, 21, 1);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.nav-menu div {
+  cursor: pointer;
+}
+
+
+.container {
+  margin: 10px auto;
+  width: 85%;
+  
+  /* border: 2px solid black; */
+  display: flex;
+}
+
+.left-side h1,
+h3 {
+  font-family: Sofia Sans;
+}
+.left-side h1,
+.price {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 800;
+  font-size: 50px;
+}
+.left-side h3 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 900;
+  font-size: 30px;
+}
+.left-side h3 span {
+  color: rgba(28, 20, 21, 1);
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  
+}
+
+
+.description p {
+  font-family: Poppins;
+}
+.social-link {
+  display: flex;
+  gap: 20px;
+}
+.social-link img {
+  /* width: 20px; */
+  object-fit: contain;
+}
+.face-book,
+.tweetwr,
+.you-tube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+ 
+  border-radius: 50%;
+}
+.icons {
+  width: 20px;
+}
+.icons-f {
+  width: 10px;
+}
+.vector {
+  background-color: transparent;
+}
+
+.splide{
+    
+    width: 500px;
+}
+.main-section{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  
+  
+}
+.splide__slide{
+    width:300px;
+}
+.splide__slide img{
+   height: 500px;
+   width: 500px;
+}
+
+.bar img{
+    
+    height: 20px;
+    width: 20px;
+}
+.bar{
+    display: none;
+}
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .sidebar-menu div,
+  .sidebar button {
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  /* Show Sidebar */
+  .sidebar.open {
+    left: 0;
+  }
+  
+@media (max-width: 480px) {
+    nav {
+      height: 70px;
+      padding: 0 10px;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+    }
+     .nav-menu{
+        display: none;
+     }
+    .logo {
+      width: 80px;
+    }
+    .choose{
+        font-size: 5px;
+    }
+    .container{
+        display: flex;
+        margin-top:-20px;
+        flex-direction: column;
+    }
+    .bar{
+        display: block;
+    }
+    .price{
+        font-size: 20px;
+    }
+    .splide {
+        width: 100%; /* Ensure the slider takes the full width of its container */
+        overflow: hidden; /* Prevent overflow issues */
+      }
+    
+      .splide__list {
+        display: flex;
+        justify-content: center; /* Center slides inside the list */
+      }
+    
+      .splide__slide {
+        height: auto; /* Allow the height to adjust dynamically */
+        width: 100%; /* Each slide should occupy the full width of the container */
+      }
+    
+      .splide__slide img {
+        height: auto; /* Maintain the aspect ratio */
+        width: 100%; /* Ensure images scale within their parent */
+        object-fit: contain; /* Prevent distortion if the image doesn’t match dimensions */
+      }
+    .left-side{
+        text-align: center;
+    }
+    .left-side h1 {
+      font-size: 24px;
+    }
+  
+    .left-side h3 {
+      font-size: 16px;
+    }
+  
+    .left-side {
+      gap: 10px;
+    }
+  
+    .description p {
+      font-size: 10px;
+    }
+  
+    .btn {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  
+    
+  
+    .social-link img{
+     height: 30px;
+     width: 500px;
+    }
+  
+    .icons {
+      width: 15px;
+    }
+    
+}
