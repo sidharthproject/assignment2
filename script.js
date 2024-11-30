@@ -57,13 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
       splideList.appendChild(li);
     });
   
-    // Initialize Splide carousel
     const splide = new Splide("#splide-carousel", {
       type: "loop",
       perPage: 1,
       arrows: true,
       pagination: false,
+      drag: true, // Ensure touch dragging is enabled
     });
+    
  
         const bar = document.querySelector(".bar img");
         const sidebar = document.querySelector(".sidebar");
@@ -89,20 +90,21 @@ document.addEventListener("DOMContentLoaded", function () {
       
     // Update content and page background when the active slide changes
     splide.on("active", (Slide) => {
-      const newIndex = Slide.index % data.length; // Ensure the index wraps correctly
+      console.log("Active slide index:", Slide.index); // Debugging
+      const newIndex = Slide.index % data.length;
       const item = data[newIndex];
-  
-      if (!item) return; // Safeguard: skip if item is undefined
-  
+    
+      if (!item) return;
+    
       heading.textContent = item.text;
       subText.innerHTML = `${item.subText.split(", ")[0]}, <span>${item.subText.split(", ")[1]}</span>`;
       description.textContent = item.description;
       price.textContent = item.price;
-  
-      // Update the background of the entire page
+    
       const gradient = `linear-gradient(to bottom right, ${item.ambientColor}, ${item.ambientColor1})`;
       body.style.background = gradient;
     });
+    
   
     splide.mount();
   });
